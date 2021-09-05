@@ -128,6 +128,13 @@ public class JiebaSegmenterTest extends TestCase {
         super.tearDown();
     }
 
+    @Test
+    public void testMyCase() {
+        String sentence = "my dictionary 添加了名创优品这个词语";
+        List<SegToken> tokens = segmenter.process(sentence, SegMode.SEARCH);
+        System.out.print(tokens.get(0).word);
+    }
+
 
     @Test
     public void testCutForSearch() {
